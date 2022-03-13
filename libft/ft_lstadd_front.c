@@ -1,16 +1,16 @@
 #include "libft.h"
 
 /**
- * @brief function for add element in start list
+ * @brief
  * 
  * @param lst 
  * @param new 
  */
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new1)
 {
-	if (!lst || !new)
+	if (!lst || !new1)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	new1->next = *lst;
+	*lst = new1;
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccade <ccade@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/13 17:03:20 by ccade             #+#    #+#             */
+/*   Updated: 2022/03/13 17:03:45 by ccade            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static void	doop(int nb, char *arr)
@@ -41,7 +53,7 @@ char	*ft_itoa(int n)
 	i = 0;
 	while (arr[i] != '\0')
 		i++;
-	res = ft_calloc(i + 1, sizeof(char));
+	res = (char *)ft_calloc(i + 1, sizeof(char));
 	if (res == NULL)
 		return (NULL);
 	i--;

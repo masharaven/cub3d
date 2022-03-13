@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccade <ccade@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/13 17:05:27 by ccade             #+#    #+#             */
+/*   Updated: 2022/03/13 17:05:57 by ccade            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -10,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	if ((s1 == NULL) || (s2 == NULL))
 		return (NULL);
-	newstr = ft_calloc((ft_strlen((char *)s1)
+	newstr = (char *)ft_calloc((ft_strlen((char *)s1)
 				+ ft_strlen((char *)s2) + 1), sizeof(char));
 	if (newstr == NULL)
 		return (NULL);

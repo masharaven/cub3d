@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccade <ccade@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/13 17:06:28 by ccade             #+#    #+#             */
+/*   Updated: 2022/03/13 17:06:48 by ccade            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	first(char const *s1, char const *set)
@@ -68,7 +80,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	count1 = first(s1, set);
 	count2 = second(s1, set);
-	strim = ft_calloc((count2 - count1 + 2), sizeof(char));
+	strim = (char *)ft_calloc((count2 - count1 + 2), sizeof(char));
 	if (strim == NULL)
 		return (NULL);
 	while ((i + count1 <= count2) && (count1 != -1) && (count2 != -1))

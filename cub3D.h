@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cub3D.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccade <ccade@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/13 17:12:36 by ccade             #+#    #+#             */
+/*   Updated: 2022/03/13 17:14:07 by ccade            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CUB3D_H
 # define CUB3D_H
 
@@ -116,8 +128,6 @@ typedef struct s_data
 	t_info		*p_info;
 }	t_data;
 
-/* parser */
-
 int		get_next_line(int fd, char **line);
 int		ft_parser(char **argv, t_data *data);
 int		ft_parser_help(t_data *data, char *line);
@@ -128,29 +138,17 @@ void	ft_map_count(char *line, t_data *data);
 int		ft_check_map_border(t_data *data);
 int		ft_check_cub(char **argv);
 void	free_all(t_data *data);
-
-/* draw.c */
 void	ft_draw_general(t_data *data);
 void	ft_error(t_data *data);
-
-/* map_cub2d.c */
-
 void	my_pixel_put(t_data *data, int x, int y, int color);
 void	ft_draw_map(t_data *data);
 int		create_trgb(int t, int r, int g, int b);
-
-/* move.c */
 int		key_press(int keycode, t_data *data);
 int		close_win(t_data *data);
-
-/* textures.c */
 void	textures(t_data *data);
 int		init_textures(t_data *data);
 void	set_texture(t_data *data);
 void	ft_draw_texture(t_data *data, int x, int y);
-int		ft_draw_3d(t_data *data);
-
-/* draw_3d.c */
 int		ft_draw_3d(t_data *data);
 void	ft_draw_general(t_data *data);
 void	ft_init_vectors(t_data *data, int x);
@@ -158,4 +156,4 @@ void	ft_init_dist(t_data *data);
 void	perpwall(t_data *data);
 void	ft_dist_wall(t_data *data);
 
-#endif //CUB3D_H
+#endif
